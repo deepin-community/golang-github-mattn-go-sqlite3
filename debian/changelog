@@ -1,0 +1,125 @@
+golang-github-mattn-go-sqlite3 (1.6.0~ds1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Remove myself from uploaders.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 15 Sep 2019 18:27:54 -0400
+
+golang-github-mattn-go-sqlite3 (1.6.0~ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version.
+  * Remove patches/0001-fix-build-against-sqlite-3.20.patch.
+    Fix error handling in upstream.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 08 May 2018 13:07:09 +0900
+
+golang-github-mattn-go-sqlite3 (1.4.0~ds1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Vcs-* urls: pkg-go-team -> go-team.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 05 Feb 2018 23:36:04 -0500
+
+golang-github-mattn-go-sqlite3 (1.4.0~ds1-2) unstable; urgency=medium
+
+  * point Vcs-* urls to salsa.d.o subproject
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 25 Jan 2018 16:18:52 -0500
+
+golang-github-mattn-go-sqlite3 (1.4.0~ds1-1) unstable; urgency=medium
+
+  * Move to salsa.debian.org.
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 30 Dec 2017 02:38:50 -0500
+
+golang-github-mattn-go-sqlite3 (1.2.0+git20170928.5160b48~ds1-1) unstable; urgency=high
+
+  * Team upload.
+  * New upstream version 1.2.0+git20170928.5160b48~ds1.
+    + Fix TestShortTimeout (Closes: #877008).
+  * minify libsqlite patch.
+
+ -- Shengjing Zhu <i@zhsj.me>  Thu, 28 Sep 2017 13:24:41 +0800
+
+golang-github-mattn-go-sqlite3 (1.2.0+git20170901.05548ff~ds1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * d/watch: dfsg -> ds.
+
+  [ Shengjing Zhu ]
+  * New upstream snapshot.
+  * Update Standards-Version to 4.1.0, change Priority to optional.
+  * Add 0001-fix-build-against-sqlite-3.20.patch (Closes: #876930).
+
+ -- Shengjing Zhu <i@zhsj.me>  Wed, 27 Sep 2017 20:12:04 +0800
+
+golang-github-mattn-go-sqlite3 (1.2.0+git20170802.105.6654e41~dfsg1-1) unstable; urgency=medium
+
+  [ Shengjing Zhu ]
+  * Team upload.
+  * New upstream snapshot.
+  * Remove embedded sqlite3 (Closes: #871448).
+  * Bump compat to 10.
+  * d/control: Using pkg-go team's full name.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 08 Aug 2017 11:07:01 -0400
+
+golang-github-mattn-go-sqlite3 (1.2.0+git20170710.100.47fc4e5~dfsg1-1) unstable; urgency=medium
+
+  [ Martín Ferrari ]
+  * Require a recent dh-golang or .h files are not included. Also, use
+    XS-Go-Import-Path.
+
+  [ Alexandre Viau ]
+  * New upstream snapshot.
+  * d/copyright: ignore new sqlite path.
+  * d/control: set Testsuite to autopkgtest-pkg-go.
+  * d/control: Bump Standards-Version to 4.0.0.
+  * d/control: Set my email to aviau@debian.org.
+  * Update patches.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 01 Aug 2017 05:32:15 -0400
+
+golang-github-mattn-go-sqlite3 (1.1.0~dfsg1-3) unstable; urgency=high
+
+  * Backport commit b76c610 from release 1.2.0 to fix an RC bug. Thanks to
+    Haruki TSURUMOTO for the patch. Closes: #854849
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 13 Feb 2017 07:27:48 -0300
+
+golang-github-mattn-go-sqlite3 (1.1.0~dfsg1-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Martin Ferrari ]
+  * Add myself to Uploaders.
+  * debian/control: Update Standards-Version (no changes).
+  * debian/control: Remove golang-go dependency from -dev package.
+  * debian/control: Replace golang-go with golang-any in Build-Depends.
+  * debian/control: Add tzdata as dependency. Closes: #839461
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 10 Oct 2016 02:51:01 +0200
+
+golang-github-mattn-go-sqlite3 (1.1.0~dfsg1-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #804187)
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Wed, 18 Nov 2015 10:47:35 -0500
+
+golang-github-mattn-go-sqlite3 (1.0.0~dfsg1-2) unstable; urgency=medium
+
+  * Fixed watch file dversionmangle
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Thu, 03 Sep 2015 18:24:26 -0400
+
+golang-github-mattn-go-sqlite3 (1.0.0~dfsg1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #797856)
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Wed, 02 Sep 2015 22:03:03 -0400

@@ -1,0 +1,22 @@
+From: Shengjing Zhu <i@zhsj.me>
+Date: Thu, 28 Sep 2017 12:10:05 +0800
+Subject: always use libsqlite3
+
+Forwarded: not-needed
+Signed-off-by: Shengjing Zhu <i@zhsj.me>
+---
+ sqlite3_libsqlite3.go | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/sqlite3_libsqlite3.go b/sqlite3_libsqlite3.go
+index e4557e6..99e9e64 100644
+--- a/sqlite3_libsqlite3.go
++++ b/sqlite3_libsqlite3.go
+@@ -2,7 +2,6 @@
+ //
+ // Use of this source code is governed by an MIT-style
+ // license that can be found in the LICENSE file.
+-// +build libsqlite3
+ 
+ package sqlite3
+ 
