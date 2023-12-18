@@ -17,7 +17,7 @@ func createBulkInsertQuery(n int, start int) (query string, args []interface{}) 
 	for i := 0; i < n; i++ {
 		values[i] = "(?, ?)"
 		args[pos] = start + i
-		args[pos+1] = fmt.Sprintf("こんにちわ世界%03d", i)
+		args[pos+1] = fmt.Sprintf("こんにちは世界%03d", i)
 		pos += 2
 	}
 	query = fmt.Sprintf(
@@ -27,7 +27,7 @@ func createBulkInsertQuery(n int, start int) (query string, args []interface{}) 
 	return
 }
 
-func bukInsert(db *sql.DB, query string, args []interface{}) (err error) {
+func bulkInsert(db *sql.DB, query string, args []interface{}) (err error) {
 	stmt, err := db.Prepare(query)
 	if err != nil {
 		return
@@ -76,7 +76,7 @@ func main() {
 
 	num := 400
 	query, args := createBulkInsertQuery(num, 0)
-	err = bukInsert(db, query, args)
+	err = bulkInsert(db, query, args)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -88,7 +88,7 @@ func main() {
 	log.Printf("updated SQLITE_LIMIT_VARIABLE_NUMBER: %d", limitVariableNumber)
 
 	query, args = createBulkInsertQuery(num, num)
-	err = bukInsert(db, query, args)
+	err = bulkInsert(db, query, args)
 	if err != nil {
 		if err != nil {
 			log.Printf("expect failed since SQLITE_LIMIT_VARIABLE_NUMBER is too small: %v", err)
@@ -102,7 +102,7 @@ func main() {
 	log.Printf("updated SQLITE_LIMIT_VARIABLE_NUMBER: %d", limitVariableNumber)
 
 	query, args = createBulkInsertQuery(500, num+num)
-	err = bukInsert(db, query, args)
+	err = bulkInsert(db, query, args)
 	if err != nil {
 		if err != nil {
 			log.Fatal(err)

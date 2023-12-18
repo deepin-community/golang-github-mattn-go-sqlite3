@@ -1,0 +1,2 @@
+# architecture=any to workaround cross building, see #984701
+package-contains-no-arch-dependent-files

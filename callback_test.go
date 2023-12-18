@@ -1,3 +1,10 @@
+// Copyright (C) 2019 Yasuhiro Matsumoto <mattn.jp@gmail.com>.
+//
+// Use of this source code is governed by an MIT-style
+// license that can be found in the LICENSE file.
+
+// +build cgo
+
 package sqlite3
 
 import (
@@ -93,5 +100,17 @@ func TestCallbackConverters(t *testing.T) {
 		} else if !test.err && err != nil {
 			t.Errorf("Expected converter when converting %s, got error: %s", reflect.TypeOf(test.v), err)
 		}
+	}
+}
+
+func TestCallbackReturnAny(t *testing.T) {
+	udf := func() interface{} {
+		return 1
+	}
+
+	typ := reflect.TypeOf(udf)
+	_, err := callbackRet(typ.Out(0))
+	if err != nil {
+		t.Errorf("Expected valid callback for any return type, got: %s", err)
 	}
 }

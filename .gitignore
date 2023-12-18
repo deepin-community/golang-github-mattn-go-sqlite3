@@ -1,1 +1,14 @@
-.pc/
+*.db
+*.exe
+*.dll
+*.o
+
+# VSCode
+.vscode
+
+# Exclude from upgrade
+upgrade/*.c
+upgrade/*.h
+
+# Exclude upgrade binary
+upgrade/upgrade
